@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sistema de Reservas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="icon" href="https://i.ibb.co/kXMPtKN/Screenshot-1.png" type="png" size=20px>
+  </head>
+  <body>
+    
+    <img src="https://i.ibb.co/6Nc4Y19/Screenshot-2.png"></img>
+    <h1>Sistema de Reservas</h1>
+    
+    <ul>
+        <% respuesta.forEach(r => { %>
+            <li> <%= r.nombre  %> <%= r.id  %> </li>
+        <% }) %>
+    </ul>
+  </body>
+</html>
