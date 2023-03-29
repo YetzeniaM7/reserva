@@ -10,6 +10,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tRouter = require('./routes/trabajo');
 var ERouter = require('./routes/equipo');
+var reservaRouter = require('./routes/reserva');
+var personalRouter = require('./routes/personal');
+var solicitanteRouter = require('./routes/solicitante');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +29,9 @@ app.use('/index', indexRouter);
 app.use('/users', usersRouter);
 app.use('/trabajo', tRouter);
 app.use('/equipo', ERouter);
+app.use('/reserva', reservaRouter);
+app.use('/personal', personalRouter);
+app.use('/solicitante', solicitanteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
