@@ -1,4 +1,4 @@
-const solicitantemodel = require('../Models/solicitantem');
+const solicitantemodel = require('../models/solicitantem');
 
 class solicitantecontroller {
     Listar(){
