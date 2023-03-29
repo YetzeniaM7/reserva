@@ -1,4 +1,4 @@
-const personalmodel = require('../Models/personalm');
+const personalmodel = require('../models/personalm');
 
 class personalcontroller {
     Listar(){
