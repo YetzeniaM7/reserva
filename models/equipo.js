@@ -33,7 +33,7 @@ class tModelo {
     //Actualizar registros
     Actualizar(i,r){
         return new Promise ((resolve,reject)=>{           
-            var query = connection.query('UPDATE EQUIPOS SET  NOMBRE = ?, SERIAL = ?, DESCRIPCION = ?, FECHA = ?, ESTADO = ? WHERE  ID = ?', [r.NOMBRE, r.fecha_final,r.SERIAL , r.DESCRIPCION,r.FECHA,r.ESTADO, i], function (error, results, fields) {
+            var query = connection.query('UPDATE EQUIPOS SET  NOMBRE = ?, SERIAL = ?, DESCRIPCION = ?, FECHA = ?, ESTADO = ? WHERE  ID = ?', [r.NOMBRE,r.SERIAL , r.DESCRIPCION,r.FECHA,r.ESTADO, i], function (error, results, fields) {
                 if (error) throw error;
                 let resp="Actualizado"
                 resolve(resp)
