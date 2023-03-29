@@ -30,7 +30,7 @@ class personalmodel {
             var query = connection.query('UPDATE `personal_tecnico` SET `nombre_apellido`= ?,`cargo`= ?,`username`= ?,`clave`= ?, `especialidad` = ? WHERE id = ? ', [ns.nombre_apellido, ns.cargo, ns.username, ns.clave, ns.especialidad, id] , function (error, results, fields) {
                 if (error) throw error;
 
-                let respt = "Espacio Actualizado Correctamente"
+                let respt = "Personal Actualizado Correctamente"
                 resolve(respt);
               });
         })
@@ -39,7 +39,7 @@ class personalmodel {
         return new Promise((resolve, reject)=>{
             connection.query('DELETE FROM personal_tecnico WHERE id = "'+id+'"', function(error,results,fields){
                 if(error) throw error;
-                let respt = "Espacio Eliminado"
+                let respt = "Personal Eliminado"
                 resolve(respt);
             })
         })
