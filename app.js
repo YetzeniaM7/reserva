@@ -10,9 +10,13 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tRouter = require('./routes/trabajo');
 var ERouter = require('./routes/equipo');
+var espacio = require('./routes/espacio');
 var reservaRouter = require('./routes/reserva');
 var personalRouter = require('./routes/personal');
 var solicitanteRouter = require('./routes/solicitante');
+var loginRouter = require('./routes/login');
+var loginpersonalRouter = require('./routes/loginpersonal');
+
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,8 +31,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Archivos utilizados
 app.use('/index', indexRouter);
 app.use('/users', usersRouter);
+app.use('/login', loginRouter);
+app.use('/loginpersonal', loginpersonalRouter);
 app.use('/trabajo', tRouter);
 app.use('/equipo', ERouter);
+app.use('/espacio', espacio);
 app.use('/reserva', reservaRouter);
 app.use('/personal', personalRouter);
 app.use('/solicitante', solicitanteRouter);
