@@ -1,9 +1,11 @@
+require('dotenv').config();
+const bcrypt = require('bcrypt');
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'reservas'
+  user     : process.env.dbUser,
+  password : process.env.dbPass,
+  database : process.env.dbName
 });
  
 connection.connect();

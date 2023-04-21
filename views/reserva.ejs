@@ -6,16 +6,49 @@
     <link rel="icon" href="https://i.ibb.co/kXMPtKN/Screenshot-1.png" type="png" size=20px>
   </head>
   <body>
-    
-    <img src="https://i.ibb.co/6Nc4Y19/Screenshot-2.png"></img>
-<h1>Sistema de Reservas</h1>
-    
-
     <ul>
-        <% respuesta.forEach(r => { %>
-            <li> <%= r.ID %> <%= r.SOLICITANTE  %>  <%= r.FECHA_INICIO  %> <%= r.FECHA_FINAL  %> <%= r.MOTIVO  %> <%= r.PERSONAL  %> <%= r.EQUIPO  %> <%= r.ESPACIO %> </li>
-         
-        <% }) %>
+       <li><img src="/images/uvm.png" width="60" height="60">
+
+      <li><a href='/index'><i><b>Home</b></i></a></li>
+      <li><a href='/equipo'><i><b>Equipos</b></i></a></li>
+      <li><a href='/espacio'><i><b>Espacios</b></i></a></li>
+      <li><a href='/personal'><i><b>Personal Tecnico</b></i></a></li>
+      <li><a href='/reserva'><i><b>Reserva</b></i></a></li>
+      <li><a href='/solicitante'><i><b>Solicitantes</b></i></a></li>
+      <li><a href='/trabajo'><i><b>Trabajos</b></i></a></li>
     </ul>
+
+    <div style = "text-align: center;">
+      <img src="https://i.ibb.co/vq53NVk/uvm.png" width="200" height="200"></img>
+    </div>
+
+  <h1 class="h1"style="text-align:center"> Sistema de Reservas</h1>
+    
+<table class="table_equipo">
+  <tr>
+    <th>ID</th>
+    <th>Solicitante</th>
+    <th>Fecha Inicial</th>
+    <th>Fechal Final</th>
+    <th>Motivo</th>
+    <th>Personal</th>
+    <th>Equipo</th>
+    <th>Espacio</th>
+  </tr>
+
+  <% respuesta.forEach(r => { %>
+    <tr>
+      <td><%= r.ID %></td>
+      <td><%= r.SOLICITANTE %></td>
+      <td><%= r.FECHA_INICIO %></td>
+      <td><%= r.FECHA_FINAL %></td>
+      <td><%= r.MOTIVO %></td>
+      <td><%= r.PERSONAL %></td>
+      <td><%= r.EQUIPO %></td>
+      <td><%= r.ESPACIO %></td>
+    </tr>
+  <% }) %>
+</table>
+
   </body>
 </html>
