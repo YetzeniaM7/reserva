@@ -52,11 +52,5 @@ router.get('/sesion', validarToken, function(req, res, next) {
     }
 })
 
-//Consultar equipos
-
-
-
-
-
 module.exports = router;
   
